@@ -34,3 +34,24 @@ a:active {
 a:hover {
     
     }
+
+.bold {
+	font-weight: bold !important;
+	}
+
+.italic {
+	font-style: italic !important;
+	}
+
+/**************
+    CONTAINERS
+**************/
+
+#main {
+	width: 960px;
+	margin: 0 auto;
+	}
+
+#content {
+	padding: 15px;
+	}

@@ -41,6 +41,10 @@ a:hover {
     
     }
 
+p {
+	margin: 0 0 .5em;
+	}
+
 .bold {
     font-weight: bold !important;
     }

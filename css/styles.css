@@ -24,34 +24,145 @@ body {
     background: none #171A1F;
     }
     
-div.clear {
+/* DEFAULT MARGIN FOR BLOCK LEVEL CONTENT ELEMENTS */
+address, blockquote, code, dl, ol, ul, p, pre, table {
+    margin: 0 0 .75em;
+    line-height: 1.5em;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 1em 0 .65em;
+    font-weight: bold;
+    font-family: Times New Roman, Times, serif;
+    }
+
+h1 {
+    font-size: 1.95em;
+    }
+
+h2 {
+    font-size: 1.5em;
+    }
+
+h3 {
+    font-size: 1.25em;
+    }
+
+h4 {
+    font-size: 1.20em;
+    }
+
+h5 {
+    font-size: 1.15em;
+    }
+
+h6 {
+    font-size: 1em;
+    }
+
+hr {
+    border: 0;
+    border-bottom: 1px dotted #CCC;
+    margin: 1.25em 0;
     clear: both;
     }
 
-a {
+ul,
+ol {
+    padding-left: 3em;
     
     }
 
-a:hover,
-a:active {
-    
+ul li {
+    list-style: disc outside;
     }
 
-a:hover {
-    
+ol ul,
+ul ul {
+    padding-left: 2.5em;
+    margin-bottom: 0;
     }
 
-p {
-	margin: 0 0 .5em;
-	}
+ol {
+    list-style-type: decimal-leading-zero;
+    }
 
+ul ol,
+ol ol {
+    list-style-type: lower-roman;
+    padding-left: 2.5em;
+    }
+
+strong,
 .bold {
     font-weight: bold !important;
     }
 
+em,
 .italic {
     font-style: italic !important;
     }
+
+li {
+    margin-left: .8em;
+    padding-left: .8em;
+    }
+
+ol {
+    list-style: decimal-leading-zero outside;
+    }
+
+pre {
+    background: none #FFFBEF;
+    border: 1px dotted #CCC;
+    color: #000;
+    text-shadow: 1px 1px 1px #DDD;
+    font-family: monospace;
+    line-height: 125%;
+    margin: 15px;
+    padding: 15px;
+    }
+
+a {
+    text-decoration: underline;
+    color: #336699;
+    }
+
+a:visited {
+    color: #8D78AF;
+    }
+
+a:hover,
+a:active, {
+    color: #FF512F;
+    }
+
+/* CLEARFIX */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+    }
+ 
+.clearfix {
+    display: inline-block;
+    }
+ 
+html[xmlns] .clearfix {
+    display: block;
+    }
+ 
+* html .clearfix {
+    height: 1%;
+    }
+
+.clear {
+    clear: both;
+    }
+
 
 /**************
     CONTAINERS
@@ -62,7 +173,8 @@ p {
     margin: 0 auto;
     }
 
-#content {
+.content {
     padding: 15px;
     min-height: 300px;
+	background: none #FFF;
     }

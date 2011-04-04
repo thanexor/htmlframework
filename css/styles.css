@@ -67,50 +67,51 @@ hr {
     clear: both;
     }
 
-ul,
-ol {
-    padding-left: 3em;
-    
-    }
+/* DEFAULT MARGIN FOR BLOCK LEVEL CONTENT ELEMENTS */
+address, blockquote, dl, ol, ul, p, pre, table {
+	margin: 0 0 .65em;
+}
 
-ul li {
-    list-style: disc outside;
-    }
+ol, ul {
+	list-style-position: outside;
+}
+
+li {
+	margin-bottom: .25em;
+	margin-left: .25em;
+	padding-left: .25em;
+}
+
+ul {
+	list-style-type: disc;
+}
 
 ol ul,
 ul ul {
-    padding-left: 2.5em;
-    margin-bottom: 0;
-    }
+	list-style-type: circle;
+	margin-bottom: 0;
+	padding-left: 2.5em;
+}
 
 ol {
-    list-style-type: decimal-leading-zero;
-    }
+	list-style-type: decimal;
+}
 
 ul ol,
 ol ol {
-    list-style-type: lower-roman;
-    padding-left: 2.5em;
-    }
+	list-style-type: lower-roman;
+	padding-left: 2.5em;
+}
 
 strong,
 .bold {
-    font-weight: bold !important;
-    }
+	font-weight: bold !important;
+}
 
 em,
 .italic {
-    font-style: italic !important;
-    }
-
-li {
-    margin-left: .8em;
-    padding-left: .8em;
-    }
-
-ol {
-    list-style: decimal-leading-zero outside;
-    }
+	font-style: italic !important;
+}
 
 pre {
     background: none #FFFBEF;
@@ -171,10 +172,10 @@ html[xmlns] .clearfix {
 #main {
     width: 960px;
     margin: 0 auto;
+	background: none #FFF;
     }
 
 .content {
     padding: 15px;
     min-height: 300px;
-	background: none #FFF;
     }

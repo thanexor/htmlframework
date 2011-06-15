@@ -164,6 +164,78 @@ html[xmlns] .clearfix {
     clear: both;
     }
 
+/**************
+    FORMS
+**************/
+
+form {
+    
+    }
+
+form div.formElement,
+form h2 {
+    margin: 15px 0 5px;
+    }
+
+form h2+div.formElement {
+    margin-top: 5px;
+    }
+
+form label {
+    display: block;
+    margin: 5px 0;
+    }
+
+form input,
+form select,
+form textarea {
+    display: block;
+    margin: 5px 0;
+    padding: 5px;
+    }
+
+form input[type='text'],
+form input[type='password'],
+form input[type='email'],
+form input[type='url'],
+form input[type='number'],
+form input[type='date'],
+form select,
+form textarea {
+    background: none #EEE;
+    border: 2px solid #999;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background-clip: padding-box;
+    }
+
+form input[type='text']:focus,
+form input[type='password']:focus,
+form input[type='email']:focus,
+form input[type='url']:focus,
+form input[type='number']:focus,
+form input[type='date']:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #336699;
+    }
+
+form textarea {
+    height: 4em;
+    }
+
+form input[type='radio'] {
+    width: 13px;
+    height: 13px;
+    margin-right: 3px;
+    display: inline;
+    }
+
+form input[type='submit'] {
+    margin: 35px 0 0;
+    }
+
 
 /**************
     CONTAINERS

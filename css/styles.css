@@ -134,7 +134,7 @@ a:visited {
     }
 
 a:hover,
-a:active, {
+a:active {
     color: #FF512F;
     }
 
@@ -175,7 +175,20 @@ html[xmlns] .clearfix {
 	background: none #FFF;
     }
 
+#header {
+	background: none #336699;
+	}
+
+#header h1 {
+	margin: 0;
+	color: #FFF;
+	}
+
+#footer {
+	background: none #DDD;
+	color: #999;
+	}
+
 .content {
     padding: 15px;
-    min-height: 300px;
     }

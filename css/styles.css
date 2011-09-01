@@ -238,6 +238,50 @@ form input[type='submit'] {
 
 
 /**************
+    COLUMNS
+**************/
+
+.col {
+	float: left;
+	margin: 0 2% 2% 0;
+	}
+
+.col-25 {
+	width: 23.5%;
+	}
+
+.col-33 {
+	width: 32%;
+	}
+
+.col-50 {
+	width: 49%;
+	}
+
+/* meant to be paired with .col-33 */
+.col-66 {
+	width: 66%;
+	}
+
+/* meant to be paired with .col-25 */
+.col-75 {
+	width: 74.5%;
+	}
+
+/* 70/30, small variation of 25/75 */
+.col-70 {
+	width: 69%;
+	}
+
+.col-30 {
+	width: 29%;
+	}
+
+.col-last {
+	margin-right: 0;
+	}
+
+/**************
     CONTAINERS
 **************/
 

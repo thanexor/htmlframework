@@ -139,26 +139,20 @@ a:active {
     }
 
 /* CLEARFIX */
+.clearfix:before, .clearfix:after {
+    content: "\0020"; 
+    display: block; 
+    height: 0; 
+    overflow: hidden;
+}
+
 .clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-    }
- 
+	clear: both;
+	}
+
 .clearfix {
-    display: inline-block;
-    }
- 
-html[xmlns] .clearfix {
-    display: block;
-    }
- 
-* html .clearfix {
-    height: 1%;
-    }
+	zoom: 1;
+	}
 
 .clear {
     clear: both;

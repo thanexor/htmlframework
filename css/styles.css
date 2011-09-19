@@ -166,16 +166,26 @@ form {
     
     }
 
-form div.formElement,
+form .form-ele,
+fieldset,
+form legend,
 form h2 {
-    margin: 15px 0 5px;
+    margin-top: 15px;
+	margin-bottom: 5px;
     }
 
-form h2+div.formElement {
+form h2 + .form-ele,
+form + fieldset {
     margin-top: 5px;
     }
 
-form label {
+fieldset {
+	border: 2px solid #336699;
+	padding: 10px;
+	}
+
+form label,
+form label.block {
     display: block;
     margin: 5px 0;
     }
@@ -197,11 +207,22 @@ form input[type='date'],
 form select,
 form textarea {
     background: none #EEE;
-    border: 2px solid #999;
+    border: 2px solid #67666B;
+	
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
     background-clip: padding-box;
+	
+	/* BORDER COLOR FADE IN/OUT */
+	-moz-transition: border-color 50ms ease-in-out;
+	-webkit-transition: border-color 50ms ease-in-out;
+	transition: border-color 50ms ease-in-out;
+	
+	/* SHADOW FADE IN/OUT */
+	-moz-transition: -moz-box-shadow 100ms ease-in-out;
+	-webkit-transition: -moz-box-shadow 100ms ease-in-out;
+	transition: -moz-box-shadow 100ms ease-in-out;
     }
 
 form input[type='text']:focus,
@@ -212,7 +233,11 @@ form input[type='number']:focus,
 form input[type='date']:focus,
 form select:focus,
 form textarea:focus {
-    border-color: #336699;
+    border-color: #053764;
+	
+	-moz-box-shadow: 0 0 3px rgba(5, 55, 100, .75);
+	-webkit-box-shadow: 0 0 3px rgba(5, 55, 100, .75);
+	box-shadow: 0 0 3px rgba(5, 55, 100, .75);
     }
 
 form textarea {
@@ -226,9 +251,37 @@ form input[type='radio'] {
     display: inline;
     }
 
+form input[type='radio'] + label,
+form input[type='checkbox'] + label,
+form select + label,
+form select + select + label {
+    display: inline;
+	margin: 0;
+    }
+
 form input[type='submit'] {
     margin: 35px 0 0;
     }
+
+form .form-ele {
+	margin-top: 0;
+	margin-bottom: 10px;
+	}
+
+form .form-ele.inline {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	margin-right: 10px;
+	}
+
+form div.form-ele-inline input,
+form div.form-ele-inline select,
+form div.form-ele-inline textarea,
+form div.form-ele-inline label {
+	display: inline;
+	vertical-align: middle;
+	}
 
 
 /**************

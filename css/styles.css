@@ -18,16 +18,20 @@ body {
 	}
 
 body {
+    background: none #E6E6E6;
+    }
+
+/* SET DEFAULT FONTS -- FORM ELEMENTS CAN HAVE INHERITANCE ISSUES */
+body, button, input, select, textarea {
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
     font-size: 13px;
-    background: none #E6E6E6;
-    }
-    
+	}
+
 /* DEFAULT MARGIN FOR BLOCK LEVEL CONTENT ELEMENTS */
 address, blockquote, code, dl, ol, ul, p, pre, table {
     margin: 0 0 .75em;
-    line-height: 1.5em;
+    line-height: 1.35em;
     }
 
 h1, h2, h3, h4, h5, h6 {
@@ -124,6 +128,21 @@ pre {
     padding: 15px;
     }
 
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+	}
+	
+sup {
+	top: -0.5em;
+	}
+	
+sub {
+	bottom: -0.25em;
+	}
+
 a {
     text-decoration: underline;
     color: #336699;
@@ -133,9 +152,14 @@ a:visited {
     color: #8D78AF;
     }
 
+a:focus {
+    outline: 1px solid #CCC;
+    }
+
 a:hover,
 a:active {
     color: #FF512F;
+	outline: 0;
     }
 
 /* CLEARFIX */

@@ -37,7 +37,7 @@ address, blockquote, code, dl, ol, ul, p, pre, table {
 h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 .65em;
     font-weight: bold;
-    font-family: Times New Roman, Times, serif;
+    font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
     }
 
 h1 {
@@ -90,8 +90,7 @@ ul {
 	list-style-type: disc;
 }
 
-ol ul,
-ul ul {
+ol ul, ul ul {
 	list-style-type: circle;
 	margin-bottom: 0;
 	padding-left: 2.5em;
@@ -101,32 +100,33 @@ ol {
 	list-style-type: decimal;
 }
 
-ul ol,
-ol ol {
+ul ol, ol ol {
 	list-style-type: lower-roman;
 	padding-left: 2.5em;
 }
 
-strong,
-.bold {
+b, strong, .bold {
 	font-weight: bold !important;
 }
 
-em,
-.italic {
+i, em, .italic {
 	font-style: italic !important;
 }
 
-pre {
-    background: none #FFFBEF;
-    border: 1px dotted #CCC;
-    color: #000;
-    text-shadow: 1px 1px 1px #DDD;
+pre, code {
+    background: none repeat scroll 0 0 #FFFBEF;
+    border: 1px dotted #CCCCCC;
+    color: #000000;
     font-family: monospace;
+    text-shadow: 1px 1px 1px #BBBBBB;
+}
+
+pre {
+    display: block;
     line-height: 125%;
     margin: 15px;
     padding: 15px;
-    }
+}
 
 sub, sup {
 	font-size: 75%;
@@ -144,12 +144,8 @@ sub {
 	}
 
 a {
-    text-decoration: underline;
-    color: #336699;
-    }
-
-a:visited {
-    color: #8D78AF;
+    text-decoration: none;
+    color: #6699CC;
     }
 
 a:focus {
@@ -160,6 +156,7 @@ a:hover,
 a:active {
     color: #FF512F;
 	outline: 0;
+	text-decoration: underline;
     }
 
 /* CLEARFIX */

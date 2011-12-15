@@ -296,10 +296,10 @@ form .form-ele.inline {
 	margin-right: 10px;
 	}
 
-form div.form-ele-inline input,
-form div.form-ele-inline select,
-form div.form-ele-inline textarea,
-form div.form-ele-inline label {
+form .form-ele-inline input,
+form .form-ele-inline select,
+form .form-ele-inline textarea,
+form .form-ele-inline label {
 	display: inline;
 	vertical-align: middle;
 	}
@@ -347,6 +347,43 @@ form div.form-ele-inline label {
 
 .col-last {
 	margin-right: 0;
+	}
+
+/*****************
+	MEDIA BOXES
+******************/
+.mb {
+	margin:1.75em 0;
+	}
+.mb .img,.mb .bdy {
+	}
+.mb .img {
+	float:left;
+	margin-right:1.5em;
+	}
+.mb .img img,.mb .img .img {
+	display:block;
+	}
+.mb .bdy {
+	}
+.mb .bdy *:first-child {
+	margin-top: 0;
+	}
+/* IMAGE ON RIGHT */
+.mb-ir .img {
+	float:right;
+	margin-right:0;
+	margin-left: 1.5em;
+	}
+/* IMAGE AND TEXT BLOCKED -- ABOVE/BELOW EACH OTHER */
+.mb-ib .img,.mb-ib .img img,.mb-ib .img .img,.mb-ib .bdy {
+	float:none !important;
+	display:block;
+	margin:0 auto;
+	text-align:center;
+	}
+.mb-ib .bdy *:first-child {
+	margin-top: 1em;
 	}
 
 /**************

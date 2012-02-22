@@ -160,6 +160,7 @@ sub {
 a {
     text-decoration: none;
     color: #6699CC;
+	cursor: pointer;
     }
 
 a:focus {

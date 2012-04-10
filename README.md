@@ -1,6 +1,7 @@
 # thanexor's simple framework
 
 This framework includes:
+
 * Basic content formatting (headings, paragraphs, quotes, tables, etc.)
 * Frankenstein'd boilerplate CSS with elements taken from [Normalize.css](https://github.com/necolas/normalize.css) and [HTML5 BP](https://github.com/h5bp/html5-boilerplate)
 * Percentage-based grid system, some ideas from [Nicole Sullivan](www.stubbornella.org/)

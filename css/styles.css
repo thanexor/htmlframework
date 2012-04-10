@@ -19,24 +19,24 @@ body {
 	font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-	}
+}
 
 body {
     background: none #E6E6E6;
-    }
+}
 
 /* SET DEFAULT FONTS -- FORM ELEMENTS CAN HAVE INHERITANCE ISSUES */
 body, button, input, select, textarea {
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
     font-size: 13px;
-	}
+}
 
 /* DEFAULT MARGIN FOR BLOCK LEVEL CONTENT ELEMENTS */
 address, blockquote, code, dl, ol, ul, p, pre, table {
     margin: 0 0 .65em;
     line-height: 1.35em;
-    }
+}
 
 /* DISPLAY BLOCK OF HTML5 ELEMENTS */
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
@@ -47,38 +47,38 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 .65em;
     font-weight: bold;
     font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
-    }
+}
 
 h1 {
     font-size: 1.95em;
-    }
+}
 
 h2 {
     font-size: 1.5em;
-    }
+}
 
 h3 {
     font-size: 1.25em;
-    }
+}
 
 h4 {
     font-size: 1.20em;
-    }
+}
 
 h5 {
     font-size: 1.15em;
-    }
+}
 
 h6 {
     font-size: 1em;
-    }
+}
 
 hr {
     border: 0;
     border-bottom: 1px dotted #BBB;
     margin: 1.25em 0;
     clear: both;
-    }
+}
 
 ol, ul {
 	list-style-position: outside;
@@ -151,52 +151,53 @@ sub, sup {
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
-	}
+}
 	
 sup {
 	top: -0.5em;
-	}
+}
 	
 sub {
 	bottom: -0.25em;
-	}
+}
 
 a {
     text-decoration: none;
     color: #6699CC;
 	cursor: pointer;
-    }
+}
 
 a:focus {
     outline: 1px solid #CCC;
-    }
+}
 
 a:hover,
 a:active {
     color: #FF512F;
 	outline: 0;
 	text-decoration: underline;
-    }
+}
 
-/* CLEARFIX */
-.clearfix:before, .clearfix:after {
+/* CLEARFIX, with added .cols class for  */
+.clearfix:before, .clearfix:after, .cols:before, .cols:after {
     content: "\0020"; 
     display: block; 
     height: 0; 
     overflow: hidden;
 }
 
-.clearfix:after {
+.clearfix:after, .cols:after {
 	clear: both;
-	}
+}
 
-.clearfix {
+.clearfix, .cols {
 	zoom: 1;
-	}
+	*overflow: hidden;
+}
 
 .clear {
     clear: both;
-    }
+}
 
 /**************
     FORMS
@@ -204,7 +205,7 @@ a:active {
 
 form {
     
-    }
+}
 
 form .form-ele,
 fieldset,
@@ -212,23 +213,23 @@ form legend,
 form h2 {
     margin-top: 15px;
 	margin-bottom: 5px;
-    }
+}
 
 form h2 + .form-ele,
 form + fieldset {
     margin-top: 5px;
-    }
+}
 
 fieldset {
 	border: 2px solid #336699;
 	padding: 10px;
-	}
+}
 
 form label,
 form label.block {
     display: block;
     margin: 5px 0;
-    }
+}
 
 form input,
 form select,
@@ -236,7 +237,7 @@ form textarea {
     display: block;
     margin: 5px 0;
     padding: 5px;
-    }
+}
 
 form input[type='text'],
 form input[type='password'],
@@ -263,7 +264,7 @@ form textarea {
 	-moz-transition: -moz-box-shadow 100ms ease-in-out;
 	-webkit-transition: -moz-box-shadow 100ms ease-in-out;
 	transition: -moz-box-shadow 100ms ease-in-out;
-    }
+}
 
 form input[type='text']:focus,
 form input[type='password']:focus,
@@ -278,18 +279,18 @@ form textarea:focus {
 	-moz-box-shadow: 0 0 3px rgba(5, 55, 100, .75);
 	-webkit-box-shadow: 0 0 3px rgba(5, 55, 100, .75);
 	box-shadow: 0 0 3px rgba(5, 55, 100, .75);
-    }
+}
 
 form textarea {
     height: 4em;
-    }
+}
 
 form input[type='radio'] {
     width: 13px;
     height: 13px;
     margin-right: 3px;
     display: inline;
-    }
+}
 
 form input[type='radio'] + label,
 form input[type='checkbox'] + label,
@@ -297,23 +298,23 @@ form select + label,
 form select + select + label {
     display: inline;
 	margin: 0;
-    }
+}
 
 form input[type='submit'] {
     margin: 35px 0 0;
-    }
+}
 
 form .form-ele {
 	margin-top: 0;
 	margin-bottom: 10px;
-	}
+}
 
 form .form-ele.inline {
 	display: inline-block;
 	position: relative;
 	vertical-align: top;
 	margin-right: 10px;
-	}
+}
 
 form .form-ele-inline input,
 form .form-ele-inline select,
@@ -321,89 +322,73 @@ form .form-ele-inline textarea,
 form .form-ele-inline label {
 	display: inline;
 	vertical-align: middle;
-	}
+}
 
 
 /**************
     COLUMNS
 **************/
 
-.col {
-	float: left;
+/* wrapping columns with .cols will clearfix */
+.cols {
+	
+}
+
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9 {
 	margin: 0 2% 2% 0;
-	}
+	float: left;
+	overflow: hidden;
+}
 
-.col-25 {
-	width: 23.5%;
-	}
+.col-1 { width:8.2%;}
+.col-2 { width:18.4%; }
+.col-3 { width:28.6%; }
+.col-4 { width:38.8%; }
+.col-5 { width:49%; }
+.col-6 { width:59.2%; }
+.col-7 { width:69.4%; }
+.col-8 { width:79.6%; }
+.col-9 { width:89.8%; }
 
-.col-33 {
-	width: 32%;
-	}
-
-.col-50 {
-	width: 49%;
-	}
-
-/* meant to be paired with .col-33 */
-.col-66 {
-	width: 66%;
-	}
-
-/* meant to be paired with .col-25 */
-.col-75 {
-	width: 74.5%;
-	}
-
-/* 70/30, small variation of 25/75 */
-.col-70 {
-	width: 69%;
-	}
-
-.col-30 {
-	width: 29%;
-	}
-
-.col-last {
-	margin-right: 0;
-	}
+/* last column in row -- width as 'auto' and no float fills in remaining space left by weird rounding */
+.col-last { margin-right: 0; width: auto; float: none;}
 
 /*****************
 	MEDIA BOXES
 ******************/
 .mb {
 	margin:1.75em 0;
-	}
+}
 .mb .img,.mb .bdy {
-	}
+}
 .mb .img {
 	float:left;
 	margin-right:1.5em;
-	}
+}
 .mb .img img,.mb .img .img {
 	display:block;
-	}
+}
 .mb .bdy {
-	}
+}
 .mb .bdy *:first-child {
 	margin-top: 0;
-	}
+}
 /* IMAGE ON RIGHT */
 .mb-ir .img {
 	float:right;
 	margin-right:0;
 	margin-left: 1.5em;
-	}
+}
 /* IMAGE AND TEXT BLOCKED -- ABOVE/BELOW EACH OTHER */
 .mb-ib .img,.mb-ib .img img,.mb-ib .img .img,.mb-ib .bdy {
 	float:none !important;
 	display:block;
 	margin:0 auto;
 	text-align:center;
-	}
+}
 .mb-ib .bdy *:first-child {
 	margin-top: 1em;
-	}
+}
 
 /**************
     CONTAINERS
@@ -413,22 +398,30 @@ form .form-ele-inline label {
     width: 960px;
     margin: 0 auto;
 	background: none #FFF;
-    }
+}
 
-#header {
+header {
 	background: none #336699;
-	}
+}
 
-#header h1 {
+header h1 {
 	margin: 0;
 	color: #FFF;
-	}
+}
 
-#footer {
+footer {
 	background: none #DDD;
 	color: #999;
-	}
+}
 
 .content {
     padding: 15px;
-    }
+}
+
+/**************
+    SITE CONTENT
+**************/
+
+#main-content {
+	
+}

@@ -44,17 +44,17 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 1em 0 .65em;
+    margin: 0 0 .65em;
     font-weight: bold;
     font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
 }
 
 h1 {
-    font-size: 1.95em;
+    font-size: 2.25em;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
 
 h3 {
@@ -71,6 +71,19 @@ h5 {
 
 h6 {
     font-size: 1em;
+	color: #999;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #666;
+}
+
+/* vertically space headings from block-level content elements */
+address+h1, blockquote+h1, code+h1, dl+h1, ol+h1, ul+h1, p+h1, pre+h1, table+h1,
+address+h2, blockquote+h2, code+h2, dl+h2, ol+h2, ul+h2, p+h2, pre+h2, table+h2,
+address+h3, blockquote+h3, code+h3, dl+h3, ol+h3, ul+h3, p+h3, pre+h3, table+h3,
+address+h4, blockquote+h4, code+h4, dl+h4, ol+h4, ul+h4, p+h4, pre+h4, table+h4,
+address+h5, blockquote+h5, code+h5, dl+h5, ol+h5, ul+h5, p+h5, pre+h5, table+h5,
+address+h6, blockquote+h6, code+h6, dl+h6, ol+h6, ul+h6, p+h6, pre+h6, table+h6 {
+	margin-top: 1.25em;
 }
 
 hr {
@@ -324,6 +337,63 @@ form .form-ele-inline label {
 	vertical-align: middle;
 }
 
+/*****************
+	TABLES
+******************/
+
+table {
+	border-collapse: collapse;
+}
+
+table td,
+table th {
+	padding: 8px 10px;
+	vertical-align: top;
+}
+
+table.tiny td,
+table.tiny th {
+	padding: 4px 5px;
+}
+
+/* DATA */
+table td {
+	border: 1px solid #DDD;
+	border-width: 1px 0;
+}
+
+/* HEADINGS */
+table th {
+	font-weight: bold;
+}
+
+table thead th {
+	vertical-align: bottom;
+	border-bottom: 1px solid #DDD;
+}
+
+table tfoot th {
+	vertical-align: top;
+	border-top: 1px solid #DDD;
+}
+
+/* VERTICAL CELL BORDERS */
+table.bordered,
+table.outer-border {
+	border: 1px solid #CCC;
+	border-color: #DDD #CCC #BBB #DDD;
+}
+
+table.bordered th,
+table.bordered td {
+	border-left: 1px solid #DDD;
+}
+
+/* ZEBRA STRIPING -- doesn't work in IE < 8 */
+table.zebra tbody tr:nth-child(odd) td,
+table.zebra tbody tr:nth-child(odd) th {
+	background-color: #F9F9F9;
+}
 
 /**************
     COLUMNS

@@ -44,9 +44,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 .65em;
+    margin: 0 0 .5em;
     font-weight: bold;
     font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+	line-height: 115%;
 }
 
 h1 {
@@ -71,9 +72,9 @@ h5 {
 
 h6 {
     font-size: 1em;
-	color: #999;
+	color: #666;
 	padding-bottom: 3px;
-	border-bottom: 1px solid #666;
+	border-bottom: 1px dotted #333;
 }
 
 /* vertically space headings from block-level content elements */
@@ -109,6 +110,11 @@ ol.nobull, ul.nobull {
 
 ol.insidebull, ul.insidebull {
 	list-style-position: inside;
+	padding-left: 0;
+}
+
+ol.lz {
+	list-style-type: decimal-leading-zero;
 }
 
 li {

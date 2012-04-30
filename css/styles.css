@@ -410,24 +410,47 @@ table.zebra tbody tr:nth-child(odd) th {
 	
 }
 
-.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9 {
+/* intervals of 5% at a time, as well as 33% classes for thirds */
+.col-5,.col-10,.col-15,.col-20,.col-25,.col-30,.col-33,.col-35,.col-40,.col-45,
+.col-50,.col-55,.col-60,.col-65,.col-70,.col-75,.col-80,.col-85,.col-90,.col-95 {
 	margin: 0 2% 2% 0;
 	float: left;
+	display: inline;
 	overflow: hidden;
+	min-height: 300px;
+	background: none #EEFFFF;
 }
 
-.col-1 { width:8.2%;}
-.col-2 { width:18.4%; }
-.col-3 { width:28.6%; }
-.col-4 { width:38.8%; }
-.col-5 { width:49%; }
-.col-6 { width:59.2%; }
-.col-7 { width:69.4%; }
-.col-8 { width:79.6%; }
-.col-9 { width:89.8%; }
+.col-5  { width: 3.1%;  }
+.col-10 { width: 8.2%;  }
+.col-15 { width: 13.3%; }
+.col-20 { width: 18.4%; }
+.col-25 { width: 23.5%; }
+.col-30 { width: 28.6%; }
+.col-35 { width: 33.7%; }
+.col-40 { width: 38.8%; }
+.col-45 { width: 43.9%; }
+.col-50 { width: 49%;   }
+.col-55 { width: 54.1%; }
+.col-60 { width: 59.2%; }
+.col-65 { width: 64.3%; }
+.col-70 { width: 69.4%; }
+.col-75 { width: 74.5%; }
+.col-80 { width: 79.6%; }
+.col-85 { width: 84.7%; }
+.col-90 { width: 89.8%; }
+.col-95 { width: 94.9%; }
+
+/* thirds, for use only with 3 of each other! */
+.col-33 { width: 31.3%; }
 
 /* last column in row -- width as 'auto' and no float fills in remaining space left by weird rounding */
-.col-last { margin-right: 0; width: auto; float: none;}
+.col-last {
+	margin-right: 0;
+	width: auto;
+	float: none;
+	display: block;
+	}
 
 /*****************
 	MEDIA BOXES

@@ -21,13 +21,13 @@ body {
     -ms-text-size-adjust: 100%;
 }
 
-/* DEFAULT FONT SIZE */
+/* BASE FONT SIZE */
 body {
     background: none #E6E6E6;
     font-size: 13px;
 }
 
-/* DEFAULT FONT FAMILY and COLOR -- FORM ELEMENTS CAN HAVE INHERITANCE ISSUES */
+/* BASE FONT FAMILY and COLOR -- FORM ELEMENTS CAN HAVE INHERITANCE ISSUES */
 body, button, input, select, textarea {
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
@@ -202,6 +202,10 @@ sub {
 	bottom: -0.25em;
 }
 
+small {
+	font-size: .85em;
+}
+
 a {
     text-decoration: none;
     color: #6699CC;
@@ -288,7 +292,7 @@ form input[type='number'],
 form input[type='date'],
 form select,
 form textarea {
-    background: none #EEE;
+    background: none #F6F6F6;
     border: 2px solid #67666B;
 	
     -moz-border-radius: 2px;
@@ -315,7 +319,7 @@ form input[type='number']:focus,
 form input[type='date']:focus,
 form select:focus,
 form textarea:focus {
-    border-color: #053764;
+    border-color: #336699;
 	
 	-moz-box-shadow: 0 0 3px rgba(5, 55, 100, .75);
 	-webkit-box-shadow: 0 0 3px rgba(5, 55, 100, .75);
@@ -347,14 +351,7 @@ form input[type='submit'] {
 
 form .form-ele {
 	margin-top: 0;
-	margin-bottom: 10px;
-}
-
-form .form-ele.inline {
-	display: inline-block;
-	position: relative;
-	vertical-align: top;
-	margin-right: 10px;
+	margin-bottom: .75em;
 }
 
 form .form-ele-inline input,
@@ -365,12 +362,22 @@ form .form-ele-inline label {
 	vertical-align: middle;
 }
 
+/* placeholder attribute text -- must be seperate to work */
+::-webkit-input-placeholder {
+    color: #666;
+}
+:-moz-placeholder {
+    color: #666;
+}
+
+
 /*****************
 	TABLES
 ******************/
 
 table {
 	border-collapse: collapse;
+	width: 100%;
 }
 
 table td,
@@ -420,7 +427,7 @@ table.bordered td {
 /* ZEBRA STRIPING -- doesn't work in IE < 8 */
 table.zebra tbody tr:nth-child(odd) td,
 table.zebra tbody tr:nth-child(odd) th {
-	background-color: #F9F9F9;
+	background-color: #F6F6F6;
 }
 
 /**************
@@ -438,6 +445,7 @@ table.zebra tbody tr:nth-child(odd) th {
 	margin: 0 2% 2% 0;
 	float: left;
 	display: inline;
+	min-height: 1px;
 }
 
 .col-5  { width: 3.1%;  }
@@ -479,7 +487,7 @@ table.zebra tbody tr:nth-child(odd) th {
 
 
 /*****************
-	MEDIA BOXES;
+	MEDIA BOXES
 ******************/
 .mb {
 	margin:1.75em 0;
@@ -526,13 +534,17 @@ table.zebra tbody tr:nth-child(odd) th {
 	box-shadow: 1px 1px 2px rgba(0,0,0,.25);
 }
 
+.floaty.bordered {
+	border: 1px solid #CCC;
+}
+
 .floaty > * {
 	display: block;
 	margin: 0 auto;
 }
 
 .floaty details,
-.floaty figcaption
+.floaty figcaption,
 .floaty .details {
 	padding: 5px;
 }
@@ -580,6 +592,9 @@ footer {
 	
 }
 
+/**************
+    MEDIA QUERY STYLES
+**************/
 
 @media only screen and (max-width: 1023px) {
 	/*#main {

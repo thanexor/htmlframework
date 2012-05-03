@@ -5,7 +5,7 @@
  ******************************************/
 
 /* Mini-fied version of Eric Meyer's reset -- meyerweb.com */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}:focus{outline: 0;}img{-ms-interpolation-mode: bicubic;}body{line-height: 1; color: black; background: white;}ol,ul{list-style: none;}table{border-collapse: separate; border-spacing: 0;}caption,th,td{text-align: left; font-weight: normal;}blockquote:before,blockquote:after,q:before,q:after{content: "";}blockquote,q{quotes: "" "";}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,article,aside,big,cite,code,del,details,dfn,em,figcaption,figure,font,footer,header,hgroup,img,ins,kbd,nav,q,s,samp,section,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}:focus{outline: 0;}img{-ms-interpolation-mode: bicubic;}body{line-height: 1; color: black; background: white;}ol,ul{list-style: none;}table{border-collapse: separate; border-spacing: 0;}caption,th,td{text-align: left; font-weight: normal;}blockquote:before,blockquote:after,q:before,q:after{content: "";}blockquote,q{quotes: "" "";}
 
 /**************
     BASICS
@@ -21,20 +21,21 @@ body {
     -ms-text-size-adjust: 100%;
 }
 
+/* DEFAULT FONT SIZE */
 body {
     background: none #E6E6E6;
-}
-
-/* SET DEFAULT FONTS -- FORM ELEMENTS CAN HAVE INHERITANCE ISSUES */
-body, button, input, select, textarea {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
     font-size: 13px;
 }
 
+/* DEFAULT FONT FAMILY and COLOR -- FORM ELEMENTS CAN HAVE INHERITANCE ISSUES */
+body, button, input, select, textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
 /* DEFAULT MARGIN FOR BLOCK LEVEL CONTENT ELEMENTS */
-address, blockquote, code, dl, ol, ul, p, pre, table {
-    margin: 0 0 .65em;
+address, blockquote, code, figure, dl, ol, ul, p, pre, table {
+    margin: 0 0 1em;
     line-height: 1.35em;
 }
 
@@ -78,12 +79,12 @@ h6 {
 }
 
 /* vertically space headings from block-level content elements */
-address+h1, blockquote+h1, code+h1, dl+h1, ol+h1, ul+h1, p+h1, pre+h1, table+h1,
-address+h2, blockquote+h2, code+h2, dl+h2, ol+h2, ul+h2, p+h2, pre+h2, table+h2,
-address+h3, blockquote+h3, code+h3, dl+h3, ol+h3, ul+h3, p+h3, pre+h3, table+h3,
-address+h4, blockquote+h4, code+h4, dl+h4, ol+h4, ul+h4, p+h4, pre+h4, table+h4,
-address+h5, blockquote+h5, code+h5, dl+h5, ol+h5, ul+h5, p+h5, pre+h5, table+h5,
-address+h6, blockquote+h6, code+h6, dl+h6, ol+h6, ul+h6, p+h6, pre+h6, table+h6 {
+address+h1, blockquote+h1, code+h1, figure+h1, dl+h1, ol+h1, ul+h1, p+h1, pre+h1, table+h1,
+address+h2, blockquote+h2, code+h2, figure+h2, dl+h2, ol+h2, ul+h2, p+h2, pre+h2, table+h2,
+address+h3, blockquote+h3, code+h3, figure+h3, dl+h3, ol+h3, ul+h3, p+h3, pre+h3, table+h3,
+address+h4, blockquote+h4, code+h4, figure+h4, dl+h4, ol+h4, ul+h4, p+h4, pre+h4, table+h4,
+address+h5, blockquote+h5, code+h5, figure+h5, dl+h5, ol+h5, ul+h5, p+h5, pre+h5, table+h5,
+address+h6, blockquote+h6, code+h6, figure+h6, dl+h6, ol+h6, ul+h6, p+h6, pre+h6, table+h6 {
 	margin-top: 1.25em;
 }
 
@@ -143,11 +144,11 @@ ul ol, ol ol {
 }
 
 b, strong, .bold {
-	font-weight: bold !important;
+	font-weight: bold;
 }
 
 i, em, .italic {
-	font-style: italic !important;
+	font-style: italic;
 }
 
 pre, code {
@@ -163,6 +164,27 @@ pre {
     line-height: 125%;
     margin: 15px;
     padding: 15px;
+}
+
+blockquote {
+	padding: .75em 0 .5em 1.25em;
+	border-left: 1px solid #CCC;
+	font-style: italic;
+}
+
+blockquote p {
+	font-size: 1.25em;
+	line-height: 140%;
+	color: #777;
+}
+
+blockquote cite {
+	font-size: .9em;
+	color: #444;
+}
+
+blockquote cite:before {
+    content: "\2014\0020";
 }
 
 sub, sup {
@@ -416,9 +438,6 @@ table.zebra tbody tr:nth-child(odd) th {
 	margin: 0 2% 2% 0;
 	float: left;
 	display: inline;
-	overflow: hidden;
-	min-height: 300px;
-	background: none #EEFFFF;
 }
 
 .col-5  { width: 3.1%;  }
@@ -442,18 +461,25 @@ table.zebra tbody tr:nth-child(odd) th {
 .col-95 { width: 94.9%; }
 
 /* thirds, for use only with 3 of each other! */
-.col-33 { width: 31.3%; }
+.col-33 { width: 32%; }
 
 /* last column in row -- width as 'auto' and no float fills in remaining space left by weird rounding */
 .col-last {
 	margin-right: 0;
-	width: auto;
-	float: none;
-	display: block;
-	}
+	display: table-cell;
+	width:auto;
+	float:none;
+	*display:block;
+	*zoom:1;
+}
+
+.ie-lt7 .col-last {
+
+}
+
 
 /*****************
-	MEDIA BOXES
+	MEDIA BOXES;
 ******************/
 .mb {
 	margin:1.75em 0;
@@ -490,11 +516,35 @@ table.zebra tbody tr:nth-child(odd) th {
 }
 
 /**************
+    IN-CONTENT FLOATS
+**************/
+
+.floaty {
+	float: right;
+	clear: right;
+	margin: 5px 5px 20px 20px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+}
+
+.floaty > * {
+	display: block;
+	margin: 0 auto;
+}
+
+.floaty details,
+.floaty figcaption
+.floaty .details {
+	padding: 5px;
+}
+
+/**************
     CONTAINERS
 **************/
 
 #main {
-    width: 960px;
+    width: 100%;
+	max-width: 960px;
+	min-width: 672px;
     margin: 0 auto;
 	background: none #FFF;
 }
@@ -513,6 +563,11 @@ footer {
 	color: #999;
 }
 
+
+.page {
+	padding: 0 20px;
+}
+
 .content {
     padding: 15px;
 }
@@ -524,3 +579,20 @@ footer {
 #main-content {
 	
 }
+
+
+@media only screen and (max-width: 1023px) {
+	/*#main {
+		background: none #666;
+	}*/
+}
+
+
+/* Mobile */
+@media handheld, only screen and (max-width: 767px) {
+	#main {
+		min-width: 300px;
+		max-width: 576px;
+	}
+}
+

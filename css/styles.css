@@ -4,8 +4,8 @@
  *written by Thane Woidan - thanewoidan.com*
  ******************************************/
 
-/* Mini-fied version of Eric Meyer's reset -- meyerweb.com */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,article,aside,big,cite,code,del,details,dfn,em,figcaption,figure,footer,header,hgroup,img,ins,kbd,nav,q,samp,section,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin: 0; padding: 0; border: 0; outline: 0; vertical-align: baseline;}:focus{outline: 0;}img{-ms-interpolation-mode: bicubic;}body{line-height: 1;}ol,ul{list-style: none;}table{border-spacing: 0;}caption,th,td{text-align: left; font-weight: normal;}blockquote:before,blockquote:after,q:before,q:after{content: "";}blockquote,q{quotes: "" "";}
+/* Mini/modified version of Eric Meyer's reset -- meyerweb.com */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,article,aside,big,cite,code,del,details,dfn,em,figcaption,figure,footer,header,hgroup,img,ins,kbd,nav,q,samp,section,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin: 0; padding: 0; border: 0; outline: 0; vertical-align: baseline;}:focus{outline: 0;}img{-ms-interpolation-mode: bicubic;}body{line-height: 1;}table{border-spacing: 0;}caption,th,td{text-align: left; font-weight: normal;}blockquote:before,blockquote:after,q:before,q:after{content: "";}blockquote,q{quotes: "" "";}
 
 /**************
 	BASICS
@@ -536,20 +536,11 @@ table.zebra tbody tr:nth-child(odd) th {
 	box-shadow: 1px 1px 2px rgba(0,0,0,.25);
 }
 
-.floaty.bordered {
-	border: 1px solid #CCC;
-}
+.floaty.bordered { border: 1px solid #CCC; }
 
-.floaty.noshadow {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
+.floaty.noshadow { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
 
-.floaty > * {
-	display: block;
-	margin: 0 auto;
-}
+.floaty > * { display: block; margin: 0 auto; }
 
 .floaty details,
 .floaty figcaption,
@@ -558,8 +549,67 @@ table.zebra tbody tr:nth-child(odd) th {
 }
 
 /**************
+	BUTTONS
+**************/
+
+.btn {
+	/* layout */
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	padding: 4px 10px;
+	vertical-align: middle;
+
+	/* text */
+	color: #333;
+	line-height: 125%;
+	text-decoration: none;
+	cursor: pointer;
+
+	/* borders */
+	border: 1px solid #CCC;
+	border-color: rgba(0,0,0,.2) rgba(0,0,0,.2) rgba(0,0,0,.4);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+  	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+
+  	/* shadows */
+  	-webkit-box-shadow: 0 1px 1px rgba(255,255,255,.25) inset, 0 -1px 0 rgba(0,0,0,.1) inset;
+  	-moz-box-shadow: 0 1px 1px rgba(255,255,255,.25) inset, 0 -1px 0 rgba(0,0,0,.1) inset;
+  	box-shadow: 0 1px 1px rgba(255,255,255,.25) inset, 0 -1px 0 rgba(0,0,0,.1) inset;
+  	text-shadow: 0 1px 1px rgba(0,0,0,.15);
+
+  	/* backgrounds */
+	background-color: #F9F9F9;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F9F9F9), to(#E6E6E6)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #F9F9F9, #E6E6E6); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #F9F9F9, #E6E6E6); /* FF3.6+ */
+	background-image:     -ms-linear-gradient(top, #F9F9F9, #E6E6E6); /* IE10 */
+	background-image:      -o-linear-gradient(top, #F9F9F9, #E6E6E6); /* Opera 11.10+ */
+	background-image:         linear-gradient(to bottom, #F9F9F9, #E6E6E6);
+}
+
+.btn:active,.btn:focus { outline: 0; text-decoration: none; }
+
+.btn:active {
+	text-shadow: 0 1px 0 rgba(0,0,0,.2);
+}
+.btn:hover {
+	background: none #ECECEC;
+	text-decoration: none;
+}
+
+.btn-large { font-size: 1.25em; padding: 6px 14px; }
+.btn-small { font-size: .85em;  padding: 3px 6px; }
+.btn-tiny  { font-size: .75em;  padding: 2px 4px; }
+
+/**************
 	CONTAINERS
 **************/
+
+/* spaces content during resizing */
+.page { padding: 0 20px; }
 
 #main {
 	width: 100%;
@@ -581,11 +631,6 @@ header h1 {
 footer {
 	background: none #DDD;
 	color: #999;
-}
-
-
-.page {
-	padding: 0 20px;
 }
 
 .content {

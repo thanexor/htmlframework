@@ -5,10 +5,10 @@
  ******************************************/
 
 /* Mini-fied version of Eric Meyer's reset -- meyerweb.com */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,article,aside,big,cite,code,del,details,dfn,em,figcaption,figure,font,footer,header,hgroup,img,ins,kbd,nav,q,s,samp,section,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}:focus{outline: 0;}img{-ms-interpolation-mode: bicubic;}body{line-height: 1; color: black; background: white;}ol,ul{list-style: none;}table{border-collapse: separate; border-spacing: 0;}caption,th,td{text-align: left; font-weight: normal;}blockquote:before,blockquote:after,q:before,q:after{content: "";}blockquote,q{quotes: "" "";}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,article,aside,big,cite,code,del,details,dfn,em,figcaption,figure,footer,header,hgroup,img,ins,kbd,nav,q,samp,section,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin: 0; padding: 0; border: 0; outline: 0; vertical-align: baseline;}:focus{outline: 0;}img{-ms-interpolation-mode: bicubic;}body{line-height: 1;}ol,ul{list-style: none;}table{border-spacing: 0;}caption,th,td{text-align: left; font-weight: normal;}blockquote:before,blockquote:after,q:before,q:after{content: "";}blockquote,q{quotes: "" "";}
 
 /**************
-    BASICS
+	BASICS
 **************/
 
 html,
@@ -17,62 +17,62 @@ body {
 	width: 100%;
 	
 	font-size: 100%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 }
 
 /* BASE FONT SIZE */
 body {
-    background: none #E6E6E6;
-    font-size: 13px;
+	background: none #E6E6E6;
+	font-size: 13px;
 }
 
 /* BASE FONT FAMILY and COLOR -- FORM ELEMENTS CAN HAVE INHERITANCE ISSUES */
 body, button, input, select, textarea {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
 }
 
 /* DEFAULT MARGIN FOR BLOCK LEVEL CONTENT ELEMENTS */
 address, blockquote, code, figure, dl, ol, ul, p, pre, table {
-    margin: 0 0 1em;
-    line-height: 1.35em;
+	margin: 0 0 1em;
+	line-height: 1.35em;
 }
 
 /* DISPLAY BLOCK OF HTML5 ELEMENTS */
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
-    display: block;
+	display: block;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 .5em;
-    font-weight: bold;
-    font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+	margin: 0 0 .5em;
+	font-weight: bold;
+	font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
 	line-height: 115%;
 }
 
 h1 {
-    font-size: 2.25em;
+	font-size: 2.25em;
 }
 
 h2 {
-    font-size: 1.75em;
+	font-size: 1.75em;
 }
 
 h3 {
-    font-size: 1.25em;
+	font-size: 1.25em;
 }
 
 h4 {
-    font-size: 1.20em;
+	font-size: 1.20em;
 }
 
 h5 {
-    font-size: 1.15em;
+	font-size: 1.15em;
 }
 
 h6 {
-    font-size: 1em;
+	font-size: 1em;
 	color: #666;
 	padding-bottom: 3px;
 	border-bottom: 1px dotted #333;
@@ -89,10 +89,10 @@ address+h6, blockquote+h6, code+h6, figure+h6, dl+h6, ol+h6, ul+h6, p+h6, pre+h6
 }
 
 hr {
-    border: 0;
-    border-bottom: 1px dotted #BBB;
-    margin: 1.25em 0;
-    clear: both;
+	border: 0;
+	border-bottom: 1px dotted #BBB;
+	margin: 1.25em 0;
+	clear: both;
 }
 
 ol, ul {
@@ -152,18 +152,18 @@ i, em, .italic {
 }
 
 pre, code {
-    background: none repeat scroll 0 0 #FFFBEF;
-    border: 1px dotted #CCCCCC;
-    color: #000000;
-    font-family: monospace;
-    text-shadow: 1px 1px 1px #BBBBBB;
+	background: none repeat scroll 0 0 #FFFBEF;
+	border: 1px dotted #CCCCCC;
+	color: #000000;
+	font-family: monospace;
+	text-shadow: 1px 1px 1px #BBBBBB;
 }
 
 pre {
-    display: block;
-    line-height: 125%;
-    margin: 15px;
-    padding: 15px;
+	display: block;
+	line-height: 125%;
+	margin: 15px;
+	padding: 15px;
 }
 
 blockquote {
@@ -184,7 +184,7 @@ blockquote cite {
 }
 
 blockquote cite:before {
-    content: "\2014\0020";
+	content: "\2014\0020";
 }
 
 sub, sup {
@@ -207,28 +207,28 @@ small {
 }
 
 a {
-    text-decoration: none;
-    color: #6699CC;
+	text-decoration: none;
+	color: #6699CC;
 	cursor: pointer;
 }
 
 a:focus {
-    outline: 1px solid #CCC;
+	outline: 1px solid #CCC;
 }
 
 a:hover,
 a:active {
-    color: #FF512F;
+	color: #FF512F;
 	outline: 0;
 	text-decoration: underline;
 }
 
 /* CLEARFIX, with added .cols class for  */
 .clearfix:before, .clearfix:after, .cols:before, .cols:after {
-    content: "\0020"; 
-    display: block; 
-    height: 0; 
-    overflow: hidden;
+	content: "\0020"; 
+	display: block; 
+	height: 0; 
+	overflow: hidden;
 }
 
 .clearfix:after, .cols:after {
@@ -241,28 +241,28 @@ a:active {
 }
 
 .clear {
-    clear: both;
+	clear: both;
 }
 
 /**************
-    FORMS
+	FORMS
 **************/
 
 form {
-    
+	
 }
 
 form .form-ele,
 fieldset,
 form legend,
 form h2 {
-    margin-top: 15px;
+	margin-top: 15px;
 	margin-bottom: 5px;
 }
 
 form h2 + .form-ele,
 form + fieldset {
-    margin-top: 5px;
+	margin-top: 5px;
 }
 
 fieldset {
@@ -272,16 +272,16 @@ fieldset {
 
 form label,
 form label.block {
-    display: block;
-    margin: 5px 0;
+	display: block;
+	margin: 5px 0;
 }
 
 form input,
 form select,
 form textarea {
-    display: block;
-    margin: 5px 0;
-    padding: 5px;
+	display: block;
+	margin: 5px 0;
+	padding: 5px;
 }
 
 form input[type='text'],
@@ -292,13 +292,13 @@ form input[type='number'],
 form input[type='date'],
 form select,
 form textarea {
-    background: none #F6F6F6;
-    border: 2px solid #67666B;
+	background: none #F6F6F6;
+	border: 2px solid #67666B;
 	
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    background-clip: padding-box;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	background-clip: padding-box;
 	
 	/* BORDER COLOR FADE IN/OUT */
 	-moz-transition: border-color 50ms ease-in-out;
@@ -319,7 +319,7 @@ form input[type='number']:focus,
 form input[type='date']:focus,
 form select:focus,
 form textarea:focus {
-    border-color: #336699;
+	border-color: #336699;
 	
 	-moz-box-shadow: 0 0 3px rgba(5, 55, 100, .75);
 	-webkit-box-shadow: 0 0 3px rgba(5, 55, 100, .75);
@@ -327,26 +327,26 @@ form textarea:focus {
 }
 
 form textarea {
-    height: 4em;
+	height: 4em;
 }
 
 form input[type='radio'] {
-    width: 13px;
-    height: 13px;
-    margin-right: 3px;
-    display: inline;
+	width: 13px;
+	height: 13px;
+	margin-right: 3px;
+	display: inline;
 }
 
 form input[type='radio'] + label,
 form input[type='checkbox'] + label,
 form select + label,
 form select + select + label {
-    display: inline;
+	display: inline;
 	margin: 0;
 }
 
 form input[type='submit'] {
-    margin: 35px 0 0;
+	margin: 35px 0 0;
 }
 
 form .form-ele {
@@ -364,10 +364,10 @@ form .form-ele-inline label {
 
 /* placeholder attribute text -- must be seperate to work */
 ::-webkit-input-placeholder {
-    color: #666;
+	color: #666;
 }
 :-moz-placeholder {
-    color: #666;
+	color: #666;
 }
 
 
@@ -431,7 +431,7 @@ table.zebra tbody tr:nth-child(odd) th {
 }
 
 /**************
-    COLUMNS
+	COLUMNS
 **************/
 
 /* wrapping columns with .cols will clearfix */
@@ -524,18 +524,26 @@ table.zebra tbody tr:nth-child(odd) th {
 }
 
 /**************
-    IN-CONTENT FLOATS
+	IN-CONTENT FLOATS
 **************/
 
 .floaty {
 	float: right;
 	clear: right;
 	margin: 5px 5px 20px 20px;
+	-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+	-moz-box-shadow: 1px 1px 2px rgba(0,0,0,.25);
 	box-shadow: 1px 1px 2px rgba(0,0,0,.25);
 }
 
 .floaty.bordered {
 	border: 1px solid #CCC;
+}
+
+.floaty.noshadow {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 
 .floaty > * {
@@ -550,14 +558,14 @@ table.zebra tbody tr:nth-child(odd) th {
 }
 
 /**************
-    CONTAINERS
+	CONTAINERS
 **************/
 
 #main {
-    width: 100%;
+	width: 100%;
 	max-width: 960px;
 	min-width: 672px;
-    margin: 0 auto;
+	margin: 0 auto;
 	background: none #FFF;
 }
 
@@ -581,11 +589,11 @@ footer {
 }
 
 .content {
-    padding: 15px;
+	padding: 15px;
 }
 
 /**************
-    SITE CONTENT
+	SITE CONTENT
 **************/
 
 #main-content {
@@ -593,7 +601,7 @@ footer {
 }
 
 /**************
-    MEDIA QUERY STYLES
+	MEDIA QUERY STYLES
 **************/
 
 @media only screen and (max-width: 1023px) {

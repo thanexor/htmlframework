@@ -32,7 +32,7 @@ Just add .col-last to the last column in the row.  Combined with simple CSS3 med
 Media Display
 -------------
 
-Nice media display classes, .floaty and .mb.
+Two media display classes, .floaty and .mb, both with lots of options.
 
 Use .floaty like this:
 
@@ -54,5 +54,7 @@ The .mb class works like this:
             <p>The .mb class is for any block-level content that has an image directly associated with it.</p>
         </figcaption>
     </figure>
+
+You can also add .mb-ib for images/content on top and bottom instead of side-by-side.  .mb-ir also puts the image on the right instead.
 
 If you really want to go H.A.M. on your site's media, you can combine .floaty, .mb and the .col classes to fit them wherever.  Woah.

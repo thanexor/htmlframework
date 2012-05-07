@@ -223,6 +223,17 @@ a:active {
 	text-decoration: underline;
 }
 
+/* selected text */
+::selection {
+	background: none #336699;
+	color: #FFF;
+}
+
+::-moz-selection {
+	background: none #336699;
+	color: #FFF;
+}
+
 /* CLEARFIX, with added .cols class for  */
 .clearfix:before, .clearfix:after, .cols:before, .cols:after {
 	content: "\0020"; 
@@ -506,6 +517,8 @@ table.zebra tbody tr:nth-child(odd) th {
 .mb .bdy *:first-child {
 	margin-top: 0;
 }
+
+/* to support IE6 and under, you need .mb as a wrapper and a direct child div with to apply the helper classes */
 /* IMAGE ON RIGHT */
 .mb-ir .img {
 	float:right;
@@ -529,6 +542,7 @@ table.zebra tbody tr:nth-child(odd) th {
 
 .floaty {
 	float: right;
+	display: inline;
 	clear: right;
 	margin: 5px 5px 20px 20px;
 	-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.25);
@@ -540,7 +554,7 @@ table.zebra tbody tr:nth-child(odd) th {
 
 .floaty.noshadow { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
 
-.floaty > * { display: block; margin: 0 auto; }
+.floaty > * { display: block; margin: 0 auto; *margin: 0;}
 
 .floaty details,
 .floaty figcaption,
@@ -561,7 +575,7 @@ table.zebra tbody tr:nth-child(odd) th {
 	vertical-align: middle;
 
 	/* text */
-	color: #333;
+	color: #444;
 	line-height: 125%;
 	text-decoration: none;
 	cursor: pointer;
@@ -574,7 +588,7 @@ table.zebra tbody tr:nth-child(odd) th {
 	border-radius: 3px;
   	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 
-  	/* shadows */
+  	/* shadows -- a highlight on top and slight shadow on bottom */
   	-webkit-box-shadow: 0 1px 1px rgba(255,255,255,.25) inset, 0 -1px 0 rgba(0,0,0,.1) inset;
   	-moz-box-shadow: 0 1px 1px rgba(255,255,255,.25) inset, 0 -1px 0 rgba(0,0,0,.1) inset;
   	box-shadow: 0 1px 1px rgba(255,255,255,.25) inset, 0 -1px 0 rgba(0,0,0,.1) inset;
@@ -592,12 +606,25 @@ table.zebra tbody tr:nth-child(odd) th {
 
 .btn:active,.btn:focus { outline: 0; text-decoration: none; }
 
-.btn:active {
-	text-shadow: 0 1px 0 rgba(0,0,0,.2);
-}
 .btn:hover {
 	background: none #ECECEC;
 	text-decoration: none;
+	color: #000;
+}
+
+.btn:active {
+	text-shadow: 0 1px 0 rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1) inset, 0 -1px 0 rgba(255,255,255,.25) inset;
+  	-moz-box-shadow: 0 1px 1px rgba(0,0,0,.1) inset, 0 -1px 0 rgba(255,255,255,.25) inset;
+  	box-shadow: 0 1px 1px rgba(0,0,0,.1) inset, 0 -1px 0 rgba(255,255,255,.25) inset;
+
+	background-color: #F9F9F9;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), to(#F9F9F9)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #E6E6E6, #F9F9F9); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #E6E6E6, #F9F9F9); /* FF3.6+ */
+	background-image:     -ms-linear-gradient(top, #E6E6E6, #F9F9F9); /* IE10 */
+	background-image:      -o-linear-gradient(top, #E6E6E6, #F9F9F9); /* Opera 11.10+ */
+	background-image:         linear-gradient(to bottom, #E6E6E6, #F9F9F9);
 }
 
 .btn-large { font-size: 1.25em; padding: 6px 14px; }
@@ -650,14 +677,15 @@ footer {
 **************/
 
 @media only screen and (max-width: 1023px) {
-	/*#main {
-		background: none #666;
-	}*/
+	/* resize #main for responsive goodness */
+	#main {
+		
+	}
 }
 
 
-/* Mobile */
 @media handheld, only screen and (max-width: 767px) {
+	/* resize #main for responsive goodness */
 	#main {
 		min-width: 300px;
 		max-width: 576px;

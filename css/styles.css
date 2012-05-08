@@ -486,7 +486,6 @@ table.zebra tbody tr:nth-child(odd) th {
 .col-last {
 	margin-right: 0;
 	display: table-cell;
-	width:auto;
 	float:none;
 	*display:block;
 	*zoom:1;
@@ -507,7 +506,7 @@ table.zebra tbody tr:nth-child(odd) th {
 }
 .mb .img {
 	float:left;
-	margin-right:1.5em;
+	margin-right:1.35em;
 }
 .mb .img img,.mb .img .img {
 	display:block;
@@ -523,7 +522,7 @@ table.zebra tbody tr:nth-child(odd) th {
 .mb-ir .img {
 	float:right;
 	margin-right:0;
-	margin-left: 1.5em;
+	margin-left: 1.35em;
 }
 /* IMAGE AND TEXT BLOCKED -- ABOVE/BELOW EACH OTHER */
 .mb-ib .img,.mb-ib .img img,.mb-ib .img .img,.mb-ib .bdy {

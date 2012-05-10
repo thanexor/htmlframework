@@ -482,13 +482,14 @@ table.zebra tbody tr:nth-child(odd) th {
 /* thirds, for use only with 3 of each other! */
 .col-33 { width: 32%; }
 
-/* last column in row -- width as 'auto' and no float fills in remaining space left by weird rounding */
+/* last column in row needs this class */
 .col-last {
 	margin-right: 0;
-	display: table-cell;
+	display: inline-block;
 	float:none;
+	position: relative;
 	*display:block;
-	*zoom:1;
+	*width: auto;
 }
 
 .ie-lt7 .col-last {

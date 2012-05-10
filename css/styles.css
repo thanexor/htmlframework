@@ -45,7 +45,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 .5em;
+	margin: 0 0 .35em;
 	font-weight: bold;
 	font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
 	line-height: 115%;
@@ -85,7 +85,7 @@ address+h3, blockquote+h3, code+h3, figure+h3, dl+h3, ol+h3, ul+h3, p+h3, pre+h3
 address+h4, blockquote+h4, code+h4, figure+h4, dl+h4, ol+h4, ul+h4, p+h4, pre+h4, table+h4,
 address+h5, blockquote+h5, code+h5, figure+h5, dl+h5, ol+h5, ul+h5, p+h5, pre+h5, table+h5,
 address+h6, blockquote+h6, code+h6, figure+h6, dl+h6, ol+h6, ul+h6, p+h6, pre+h6, table+h6 {
-	margin-top: 1.25em;
+	margin-top: 1em;
 }
 
 hr {

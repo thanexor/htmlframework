@@ -227,11 +227,13 @@ a:active {
 ::selection {
 	background: none #336699;
 	color: #FFF;
+	text-shadow: none;
 }
 
 ::-moz-selection {
 	background: none #336699;
 	color: #FFF;
+	text-shadow: none;
 }
 
 /* CLEARFIX, with added .cols class for  */

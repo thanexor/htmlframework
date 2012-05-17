@@ -107,6 +107,12 @@ nav ol, nav ul {
 
 ol.nobull, ul.nobull {
 	list-style: outside none;
+	padding-left: 0;
+}
+
+ol.nobull > li, ul.nobull > li {
+	margin-left: 0;
+	padding-left: 0;
 }
 
 ol.insidebull, ul.insidebull {
@@ -236,7 +242,7 @@ a:active {
 	text-shadow: none;
 }
 
-/* CLEARFIX, with added .cols class for  */
+/* CLEARFIX, with added .cols class for clearing grids  */
 .clearfix:before, .clearfix:after, .cols:before, .cols:after {
 	content: "\0020"; 
 	display: block; 
@@ -261,52 +267,39 @@ a:active {
 	FORMS
 **************/
 
-form {
-	
-}
-
-form .form-ele,
-fieldset,
-form legend,
-form h2 {
-	margin-top: 15px;
-	margin-bottom: 5px;
-}
-
-form h2 + .form-ele,
-form + fieldset {
-	margin-top: 5px;
-}
-
 fieldset {
-	border: 2px solid #336699;
+	border: 1px solid #333;
 	padding: 10px;
 }
 
 form label,
-form label.block {
-	display: block;
-	margin: 5px 0;
-}
-
 form input,
 form select,
 form textarea {
 	display: block;
 	margin: 5px 0;
-	padding: 5px;
+}
+
+form label {
+	line-height: 120%;
 }
 
 form input[type='text'],
 form input[type='password'],
 form input[type='email'],
 form input[type='url'],
+form input[type='search'],
 form input[type='number'],
 form input[type='date'],
 form select,
 form textarea {
-	background: none #F6F6F6;
-	border: 2px solid #67666B;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	padding: 5px;
+	background: none #F9F9F9;
+	border: 2px solid #7B8B99;
 	
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
@@ -328,6 +321,7 @@ form input[type='text']:focus,
 form input[type='password']:focus,
 form input[type='email']:focus,
 form input[type='url']:focus,
+form input[type='search']:focus,
 form input[type='number']:focus,
 form input[type='date']:focus,
 form select:focus,
@@ -339,27 +333,72 @@ form textarea:focus {
 	box-shadow: 0 0 3px rgba(5, 55, 100, .75);
 }
 
+/* reset search appearance -- from HTML5BP */
+input[type="search"] { -webkit-appearance: textfield; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
 form textarea {
 	height: 4em;
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
 }
 
+form input[type='checkbox'],
 form input[type='radio'] {
-	width: 13px;
-	height: 13px;
-	margin-right: 3px;
+	margin: 0 3px 0 0;
 	display: inline;
+	vertical-align: baseline;
 }
 
+/* full-width inputs */
+form .form-ele-full {
+
+}
+
+/* inline-style inputs get .form-ele-inline */
 form input[type='radio'] + label,
 form input[type='checkbox'] + label,
-form select + label,
-form select + select + label {
+form .form-ele-inline label,
+form .form-ele-inline input,
+form .form-ele-inline select,
+form .form-ele-inline textarea {
 	display: inline;
 	margin: 0;
+	vertical-align: baseline;
+	/* IE7's baseline is the bottom of the input, middle works better */
+	*vertical-align: middle;
+}
+
+
+/* space inputs from the labels */
+form input[type='radio'] + label + input[type='radio'],
+form input[type='checkbox'] + label + input[type='checkbox'],
+form .form-ele-inline input,
+form .form-ele-inline select,
+form .form-ele-inline textarea {
+	margin-left: 1em;
+}
+
+/* accounts for people who prefer to put inputs inside of labels */
+form .form-ele + input[type='radio']:first-child,
+form .form-ele + input[type='checkbox']:first-child,
+form .form-ele-inline label:first-child input {
+	margin-left: 0;
+}
+
+form .form-ele-inline input[type='text'],
+form .form-ele-inline input[type='password'],
+form .form-ele-inline input[type='email'],
+form .form-ele-inline input[type='url'],
+form .form-ele-inline input[type='search'],
+form .form-ele-inline input[type='number'],
+form .form-ele-inline input[type='date'] {
+
 }
 
 form input[type='submit'] {
-	margin: 35px 0 0;
+	margin: 2em 0 0;
 }
 
 form .form-ele {
@@ -367,21 +406,9 @@ form .form-ele {
 	margin-bottom: .75em;
 }
 
-form .form-ele-inline input,
-form .form-ele-inline select,
-form .form-ele-inline textarea,
-form .form-ele-inline label {
-	display: inline;
-	vertical-align: middle;
-}
-
 /* placeholder attribute text -- must be seperate to work */
-::-webkit-input-placeholder {
-	color: #666;
-}
-:-moz-placeholder {
-	color: #666;
-}
+::-webkit-input-placeholder { color: #666; }
+:-moz-placeholder { color: #666; }
 
 
 /*****************

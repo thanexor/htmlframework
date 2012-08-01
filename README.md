@@ -5,7 +5,7 @@ Everything is easily editable and brandable which, in my opinion, is a more real
 Basic Features
 --------------
 
-* Frankenstein'd boilerplate CSS with elements taken from [Normalize.css](https://github.com/necolas/normalize.css) and [HTML5 BP](https://github.com/h5bp/html5-boilerplate)
+* Frankenstein'd boilerplate CSS with elements taken from [Normalize.css](https://github.com/necolas/normalize.css) and [HTML5 BP](https://github.com/h5bp/html5-boilerplate).  (HTML5BP has since added these, which makes me feel a little less special)
 * Basic but classy typography and content element formatting (buttons, headings, paragraphs, blockquotes, tables, etc.)
 * Percentage-based grid system, some ideas from [Nicole Sullivan](www.stubbornella.org/)
 * jQuery, UI and Modernizr
